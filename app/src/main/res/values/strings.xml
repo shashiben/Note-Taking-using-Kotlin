@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">NoteTaker</string>
     <string name="notes">My Notes</string>
-    <string name="notes_title">Notes Title</string>
-    <string name="notes_sub_title">Notes Sub Title</string>
+    <string name="notes_title">Enter Title…</string>
+    <string name="notes_sub_title">Enter Sub Title…</string>
     <string name="notes_desc">Enter Note Here</string>
     <string name="web_url">Enter Web Url</string>
     <string name="ok">OK</string>

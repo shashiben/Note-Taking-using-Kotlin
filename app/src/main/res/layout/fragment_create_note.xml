@@ -5,86 +5,107 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    tools:context=".fragments.CreateNoteFragment"
-    >
+    tools:context=".fragments.CreateNoteFragment">
 
-    <TextView
-        android:id="@+id/title"
+    <ImageView
+        android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingStart="@dimen/_10ssp"
-        android:paddingTop="@dimen/_10ssp"
-        android:text="@string/notes"
-        android:textColor="@color/ColorWhite"
-        android:textSize="@dimen/_15ssp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:src="@drawable/ic_back"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/ColorWhite" />
 
-    <SearchView
-        android:id="@+id/searchView"
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/done"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:queryHint="@string/search"
-        android:layout_margin="@dimen/_10sdp"
-        android:theme="@style/ThemeOverlay.search"
-        android:background="@drawable/background"
-        android:searchIcon="@drawable/ic_search"
-        android:iconifiedByDefault="false"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:src="@drawable/ic_check"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/notesList"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/ColorWhite" />
+    <TextView
+        android:id="@+id/dateField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:ellipsize="end"
+        android:paddingStart="@dimen/_10sdp"
+        android:textColor="@color/ColorWhite"
+        android:textColorHint="@color/ColorGrey"
+        android:textSize="@dimen/_8ssp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchView" />
+        app:layout_constraintTop_toBottomOf="@+id/back" />
+
+    <EditText
+        android:id="@+id/titleField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:ellipsize="end"
+        android:hint="@string/notes_title"
+        android:maxLines="1"
+        android:padding="@dimen/_10sdp"
+        android:textColor="@color/ColorWhite"
+        android:textColorHint="@color/ColorGrey"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateField" />
 
     <LinearLayout
+        android:id="@+id/subtitle_linear_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
         android:orientation="horizontal"
-        android:padding="@dimen/_10sdp"
-        android:id="@+id/actionTools"
-        app:layout_constraintBaseline_toBottomOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleField">
 
-        <ImageView
-            android:layout_width="wrap_content"
+        <View
+            android:layout_width="@dimen/_5sdp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:background="@color/ColorBlue" />
+
+        <EditText
+            android:id="@+id/subtitleField"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_check"
-            app:tint="@color/ColorWhite" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/_10sdp"
-            android:src="@drawable/ic_image"
-            app:tint="@color/ColorWhite" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_link"
-            app:tint="@color/ColorWhite" />
-
+            android:ellipsize="end"
+            android:hint="@string/notes_sub_title"
+            android:maxLines="1"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/ColorWhite"
+            android:textColorHint="@color/ColorGrey"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
     </LinearLayout>
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@id/actionTools"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:background="@color/colorAccent"
-        android:src="@drawable/ic_add"
-        android:layout_marginEnd="@dimen/_20sdp"
-        android:layout_marginBottom="@dimen/_20sdp"
+
+    <EditText
+        android:id="@+id/noteDesc"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/plus" />
+        android:layout_margin="@dimen/_10sdp"
+        android:hint="@string/notes_desc"
+        android:inputType="textMultiLine"
+        android:padding="@dimen/_10sdp"
+        android:textColor="@color/ColorWhite"
+        android:textColorHint="@color/ColorGrey"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtitle_linear_layout" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

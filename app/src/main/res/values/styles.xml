@@ -11,7 +11,7 @@
         <!-- Text color -->
         <item name="android:editTextColor">@color/ColorWhite</item>
         <!-- Hint text color -->
-        <item name="android:textColorHint">@color/ColorGray</item>
+        <item name="android:textColorHint">@color/ColorGrey</item>
 
     </style>
 </resources>

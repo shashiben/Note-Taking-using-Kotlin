@@ -3,14 +3,15 @@ package nsd.practice.notetaker
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import nsd.practice.notetaker.fragments.CreateNoteFragment
+import nsd.practice.notetaker.fragments.HomeFragment
 
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        replaceFragment(CreateNoteFragment.newInstance(), false)
+        replaceFragment(HomeFragment.newInstance(), false)
+
     }
 
     fun replaceFragment(fragment: Fragment, isTransition: Boolean) {
