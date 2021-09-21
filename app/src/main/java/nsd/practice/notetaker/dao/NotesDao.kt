@@ -5,8 +5,8 @@ import nsd.practice.notetaker.entity.Notes
 
 @Dao
 interface NotesDao {
-    @get:Query("Select * from notes order by id desc")
-    val getAllNotes: List<Notes>
+    @Query("Select * from notes order by id desc")
+    suspend fun getAllNotes(): List<Notes>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertNotes(note: Notes)

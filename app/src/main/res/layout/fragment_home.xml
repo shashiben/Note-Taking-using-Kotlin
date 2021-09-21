@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    tools:context=".fragments.HomeFragment"
-    >
+    tools:context=".fragments.HomeFragment">
 
     <TextView
         android:id="@+id/title"
@@ -25,12 +24,12 @@
         android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:queryHint="@string/search"
         android:layout_margin="@dimen/_10sdp"
-        android:theme="@style/ThemeOverlay.search"
         android:background="@drawable/background"
-        android:searchIcon="@drawable/ic_search"
         android:iconifiedByDefault="false"
+        android:queryHint="@string/search"
+        android:searchIcon="@drawable/ic_search"
+        android:theme="@style/ThemeOverlay.search"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,14 +42,15 @@
         android:layout_margin="@dimen/_10sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchView" />
+        app:layout_constraintTop_toBottomOf="@+id/searchView"
+        tools:listitem="@layout/note_item" />
 
     <LinearLayout
+        android:id="@+id/actionTools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="@dimen/_10sdp"
-        android:id="@+id/actionTools"
         app:layout_constraintBaseline_toBottomOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -76,16 +76,17 @@
             app:tint="@color/ColorWhite" />
 
     </LinearLayout>
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@id/actionTools"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:background="@color/colorAccent"
         android:id="@+id/fabCreateNoteBtn"
-        android:src="@drawable/ic_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/_20sdp"
         android:layout_marginBottom="@dimen/_20sdp"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/plus" />
+        android:background="@color/colorAccent"
+        android:contentDescription="@string/plus"
+        android:src="@drawable/ic_add"
+        app:layout_constraintBottom_toBottomOf="@id/actionTools"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
