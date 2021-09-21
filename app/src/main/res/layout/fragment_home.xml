@@ -7,75 +7,43 @@
     android:background="@color/colorPrimaryDark"
     tools:context=".fragments.HomeFragment">
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingStart="@dimen/_10ssp"
-        android:paddingTop="@dimen/_10ssp"
-        android:text="@string/notes"
-        android:textColor="@color/ColorWhite"
-        android:textSize="@dimen/_15ssp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <SearchView
-        android:id="@+id/searchView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_10sdp"
-        android:background="@drawable/background"
-        android:iconifiedByDefault="false"
-        android:queryHint="@string/search"
-        android:searchIcon="@drawable/ic_search"
-        android:theme="@style/ThemeOverlay.search"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/notesList"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_10sdp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchView"
-        tools:listitem="@layout/note_item" />
-
     <LinearLayout
-        android:id="@+id/actionTools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="@dimen/_10sdp"
-        app:layout_constraintBaseline_toBottomOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <ImageView
+        <TextView
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_check"
-            app:tint="@color/ColorWhite" />
+            android:paddingStart="@dimen/_10ssp"
+            android:paddingTop="@dimen/_10ssp"
+            android:text="@string/notes"
+            android:textColor="@color/ColorWhite"
+            android:textSize="@dimen/_15ssp" />
 
-        <ImageView
-            android:layout_width="wrap_content"
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/_10sdp"
-            android:src="@drawable/ic_image"
-            app:tint="@color/ColorWhite" />
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/background"
+            android:iconifiedByDefault="false"
+            android:queryHint="@string/search"
+            android:searchIcon="@drawable/ic_search"
+            android:closeIcon="@drawable/ic_cancel"
+            android:theme="@style/ThemeOverlay.search" />
 
-        <ImageView
-            android:layout_width="wrap_content"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/notesList"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_link"
-            app:tint="@color/ColorWhite" />
+            android:layout_margin="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/searchView"
+            tools:listitem="@layout/note_item" />
 
     </LinearLayout>
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabCreateNoteBtn"
@@ -86,7 +54,7 @@
         android:background="@color/colorAccent"
         android:contentDescription="@string/plus"
         android:src="@drawable/ic_add"
-        app:layout_constraintBottom_toBottomOf="@id/actionTools"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

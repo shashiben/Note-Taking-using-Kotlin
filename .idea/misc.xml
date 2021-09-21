@@ -4,14 +4,23 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Projects/Normal Projects/NoteTaker/app/src/main/res/drawable-anydpi/ic_add.xml" value="0.290625" />
+        <entry key="..\:/Projects/Normal Projects/NoteTaker/app/src/main/res/drawable-anydpi/ic_cancel.xml" value="0.15989583333333332" />
         <entry key="..\:/Projects/Normal Projects/NoteTaker/app/src/main/res/drawable-anydpi/ic_check.xml" value="0.290625" />
         <entry key="..\:/Projects/Normal Projects/NoteTaker/app/src/main/res/drawable-anydpi/ic_delete.xml" value="0.11203703703703703" />
         <entry key="..\:/Projects/Normal Projects/NoteTaker/app/src/main/res/drawable-anydpi/ic_search.xml" value="0.290625" />
         <entry key="..\:/Projects/Normal Projects/NoteTaker/app/src/main/res/drawable/background.xml" value="0.2111111111111111" />
+        <entry key="..\:/Projects/Normal Projects/NoteTaker/app/src/main/res/drawable/bottom_sheet_view.xml" value="0.24259259259259258" />
+        <entry key="..\:/Projects/Normal Projects/NoteTaker/app/src/main/res/drawable/note_color_1.xml" value="0.1824074074074074" />
+        <entry key="..\:/Projects/Normal Projects/NoteTaker/app/src/main/res/drawable/note_color_2.xml" value="0.175" />
+        <entry key="..\:/Projects/Normal Projects/NoteTaker/app/src/main/res/drawable/note_color_4.xml" value="0.175" />
+        <entry key="..\:/Projects/Normal Projects/NoteTaker/app/src/main/res/drawable/note_color_5.xml" value="0.175" />
+        <entry key="..\:/Projects/Normal Projects/NoteTaker/app/src/main/res/drawable/note_color_6.xml" value="0.175" />
+        <entry key="..\:/Projects/Normal Projects/NoteTaker/app/src/main/res/drawable/note_color_7.xml" value="0.175" />
         <entry key="..\:/Projects/Normal Projects/NoteTaker/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Projects/Normal Projects/NoteTaker/app/src/main/res/layout/fragment_create_note.xml" value="0.27025641025641023" />
-        <entry key="..\:/Projects/Normal Projects/NoteTaker/app/src/main/res/layout/fragment_home.xml" value="0.27447916666666666" />
+        <entry key="..\:/Projects/Normal Projects/NoteTaker/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/Projects/Normal Projects/NoteTaker/app/src/main/res/layout/note_item.xml" value="0.27447916666666666" />
+        <entry key="..\:/Projects/Normal Projects/NoteTaker/app/src/main/res/layout/notes_bottom_sheet.xml" value="0.2" />
       </map>
     </option>
   </component>
